@@ -94,6 +94,49 @@
   line-height: 1.5;
 }
 
+.center {
+  text-align: center;
+}
+
+.card label {
+  margin-right: 5px;
+}
+
+.card select {
+  padding: 10px;
+}
+
+.card input {
+  padding: 10px;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexcol {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.flexcolcenter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.submit {
+  margin: 5px;
+  padding: 10px;
+}
+
+.warning {
+  color: orange;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

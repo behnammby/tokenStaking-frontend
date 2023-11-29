@@ -1,43 +1,43 @@
 import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
-import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import type { AppProps } from 'next/app';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import {
-  arbitrum,
   goerli,
-  mainnet,
-  optimism,
-  polygon,
-  base,
-  zora,
 } from 'wagmi/chains';
+
+import {
+  metaMaskWallet,
+} from '@rainbow-me/rainbowkit/wallets';
 import { publicProvider } from 'wagmi/providers/public';
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
-    mainnet,
-    polygon,
-    optimism,
-    arbitrum,
-    base,
-    zora,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli] : []),
+    goerli,
   ],
   [publicProvider()]
 );
 
-const { connectors } = getDefaultWallets({
-  appName: 'RainbowKit App',
-  projectId: 'YOUR_PROJECT_ID',
-  chains,
-});
+
+
+const connectors = connectorsForWallets([
+  {
+    groupName: 'Recommended',
+    wallets: [
+      metaMaskWallet({
+        chains: chains,
+        projectId: process.env.NEXT_PUBLIC_PROJECT_ID ?? 'NO_PROJECT_ID'
+      })
+    ]
+  }
+]);
 
 const wagmiConfig = createConfig({
   autoConnect: true,
   connectors,
-  publicClient,
-  webSocketPublicClient,
+  publicClient: publicClient,
+  webSocketPublicClient: webSocketPublicClient,
 });
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -1,0 +1,101 @@
+Compiling your contracts...
+===========================
+✓ Fetching solc version list from solc-bin. Attempt #1
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'goerli'
+> Network id:      5
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1682697706_mocktoken.js
+=======================
+
+   Replacing 'MockToken'
+   ---------------------
+   > transaction hash:    0xcf495d25ce2f2edf47cf5fbfdfcda2ba1c41bb8455bba646c6bdac32e5c11c93
+   > Blocks: 1            Seconds: 30
+   > contract address:    0x757fd4B38eAc09b52c8dA663aB8df6dd66eBb0eb
+   > block number:        10121907
+   > block timestamp:     1701177888
+   > account:             0x154b46249fBfA54fBAf6946568b8E5a27Ff5091B
+   > balance:             1.081098434748572714
+   > gas used:            1157550 (0x11a9ae)
+   > gas price:           2.500000027 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00289387503125385 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 10121909)
+   > confirmation number: 2 (block: 10121910)
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.00289387503125385 ETH
+
+
+1682697724_utils.js
+===================
+
+   Replacing 'Utils'
+   -----------------
+   > transaction hash:    0x4200a3b20cedded589d1210e10ffd49b1f41edbcbd82d7467889e9a0529586d7
+   > Blocks: 2            Seconds: 22
+   > contract address:    0x7b1075Eb0D2A45C21ea07dbdd1C6Bb7590D7C879
+   > block number:        10121912
+   > block timestamp:     1701177948
+   > account:             0x154b46249fBfA54fBAf6946568b8E5a27Ff5091B
+   > balance:             1.080784799745561818
+   > gas used:            125454 (0x1ea0e)
+   > gas price:           2.500000024 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000313635003010896 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 10121913)
+   > confirmation number: 2 (block: 10121914)
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000313635003010896 ETH
+
+
+1682697731_tokenstaking.js
+==========================
+
+   Linking
+   -------
+   * Contract: TokenStaking <--> Library: Utils (at address: 0x7b1075Eb0D2A45C21ea07dbdd1C6Bb7590D7C879)
+
+   Replacing 'TokenStaking'
+   ------------------------
+   > transaction hash:    0xd41eb3c2acd9f0e856a0ec619a7cb0654802c97bbc1b671ee6a7852d239357a0
+   > Blocks: 1            Seconds: 35
+   > contract address:    0x8b6a3EB6d8b5b23857d70f8027346F6f76B7d8df
+   > block number:        10121916
+   > block timestamp:     1701178044
+   > account:             0x154b46249fBfA54fBAf6946568b8E5a27Ff5091B
+   > balance:             1.07659590970702403
+   > gas used:            1675556 (0x199124)
+   > gas price:           2.500000023 gwei
+   > value sent:          0 ETH
+   > total cost:          0.004188890038537788 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 10121919)
+   > confirmation number: 2 (block: 10121920)
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.004188890038537788 ETH
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.007396400072802534 ETH
